@@ -23,18 +23,28 @@ export default props => (
                 )
             }
         </Stack.Screen>
-        <Stack.Screen name="TelaB" options={{title:'Informações Específicas'}}>
+        <Stack.Screen name="TelaB" options={{title:'Informações Específicas'}} >
             {
                 props => (
                     <View style={{flex:1}}>
-                        <PassoStack {...props} avancar='TelaC' >
+                        <PassoStack {...props} avancar='TelaC' voltar >
                             <TelaB />
                         </PassoStack>
                     </View>
                 )
             }
         </Stack.Screen>
-        <Stack.Screen name="TelaC" component={TelaC} />
+        <Stack.Screen name="TelaC" options={{title:'Informações Finais'}} >
+            {
+                props => (
+                    <View style={{flex:1}}>
+                        <PassoStack {...props}  voltar >
+                            <TelaC />
+                        </PassoStack>
+                    </View>
+                )
+            }
+        </Stack.Screen>
     </Stack.Navigator>
 
     /*
