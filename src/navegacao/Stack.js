@@ -8,7 +8,9 @@ import TelaC from '../views/TelaC'
 const Stack = createStackNavigator()
 
 export default props => (
-    <Stack.Navigator initialRouteName="TelaA"> 
-        <Stack.Screen name="TelaA" component={TelaA} />
+    <Stack.Navigator initialRouteName="TelaA" screenOptions={{headerShown:true}} > 
+        <Stack.Screen name="TelaA" component={TelaA} options={{title:'Informações Iniciais'}} />
+        <Stack.Screen name="TelaB" component={TelaB} />
+        <Stack.Screen name="TelaC" component={TelaC} />
     </Stack.Navigator>
 )
