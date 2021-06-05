@@ -12,7 +12,7 @@ export default props => {
                 }                
                 {
                     props.avancar ?
-                    <Button onPress={ ()=>{props.navigation.navigate(props.avancar)} } title='Avançar'  ></Button>
+                    <Button onPress={ ()=>{props.navigation.push(props.avancar,{numero:parseInt(Math.random() * 100)})} } title='Avançar'  ></Button>
                     : false
                 }
             </View>

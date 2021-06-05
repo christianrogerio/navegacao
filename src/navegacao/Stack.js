@@ -38,8 +38,8 @@ export default props => (
             {
                 props => (
                     <View style={{flex:1}}>
-                        <PassoStack {...props}  voltar >
-                            <TelaC />
+                        <PassoStack {...props}  voltar avancar='TelaC' >
+                            <TelaC {...props} />
                         </PassoStack>
                     </View>
                 )
