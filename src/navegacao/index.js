@@ -8,8 +8,8 @@ import DrawMenu from './DrawMenu'
 export default props => (
     <SafeAreaView style={{flex: 1}}>
         <NavigationContainer>
-            { /* <Tabs /> */}
-            <DrawMenu />
+            <Tabs /> 
+            { /* <DrawMenu /> */ }
         </NavigationContainer>
     </SafeAreaView>
 )
