@@ -22,10 +22,10 @@ export default props => {
                   iconName = focused?'ios-information-circle':'ios-information-circle-outline';
                   break;
                 case 'TelaB':
-                  iconName = focused?'ios-information-circle':'ios-information-circle-outline';
+                  iconName = focused?'ios-star':'ios-star';
                   break;
                 case 'TelaC':
-                  iconName = focused?'ios-information-circle':'ios-information-circle-outline';
+                  iconName = focused?'home':'home';
                   break;                                      
               }
               /*
@@ -44,12 +44,12 @@ export default props => {
           })}
   
         
-        tabBarOptions={{inactiveTintColor:'gray', activeTintColor:'blue', labelStyle:{ fontSize:20, backgroundColor:'yellow' }  }}
+        tabBarOptions={{inactiveTintColor:'gray', showLabel:true, activeTintColor:'blue', labelStyle:{ /*fontSize:20, */ backgroundColor:'yellow' }  }}
             initialRouteName='TelaC'
         >
-            <Tab.Screen name='TelaA' component={TelaA}  />
-            <Tab.Screen name='TelaB' component={TelaB}  />
-            <Tab.Screen name='TelaC' component={TelaC}  />
+            <Tab.Screen name='TelaA' component={TelaA} options={{title:'Home'}} />
+            <Tab.Screen name='TelaB' component={TelaB}  options={{title:'Compras'}}  />
+            <Tab.Screen name='TelaC' component={TelaC} options={{title:'Notificações'}}  />
         </Tab.Navigator>
     )
 }
